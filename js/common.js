@@ -1,6 +1,5 @@
 /* عنوان الـ API — مرة وحدة للمشروع كله (الملفات التانية بتستخدم نفس الاسم) */
-var API_BASE = "http://localhost:3000/api";
-
+var API_BASE = "/api";
 
 function tadreebStatusClass(status) {
   var n = String(status || "Pending").toLowerCase().trim();
