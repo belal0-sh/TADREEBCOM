@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TADREEBCOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/global.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="brand" >
+      <span class="logo">▥</span>
+      <span>TADREEBCOM</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="internships.html">Find Internships</a>
+      <a href="companies.html">Companies</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+        <span id="themeIcon">☾</span>
+      </button>
+      <a class="link-btn" href="login.html">Log in</a>
+      <a class="primary small" href="signup.html">Sign up</a>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">THE INTERNSHIP PLATFORM FOR JORDAN</span>
+          <h1>Launch your career with the right internship.</h1> 
+          <p>Connect with top companies in Amman, Irbid and beyond. Find meaningful work experience, build your network, and jump start your professional journey.</p>
+          <div class="hero-buttons">
+            <a href="internships.html" class="primary" >Browse internships <span>→</span></a>
+            <a class="secondary" href="signup.html" id="heroAccountCta">Create an account</a>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Illustration">
+          <img src="images/hero-illustration.png" alt="Students exploring internship opportunities" class="hero-img">
+        </div>
+      </div>
+    </section>
+
+    <section class="statsH container">
+      <article><span>Open internships</span><strong id="statInternships">—</strong><p>from the database</p></article>
+      <article><span>Partner companies</span><strong id="statCompanies">—</strong><p>registered on the platform</p></article>
+      <article><span>Students</span><strong id="statStudents">—</strong><p>signed up</p></article>
+    
+    </section>
+
+    <section class="why container">
+      <div class="section-title">
+        <h2>Why TADREEBCOM</h2>
+        <p>Built specifically for the Jordanian internship market — every feature exists to make finding the right opportunity faster.</p>
+      </div>
+      <div class="why-grid">
+        <article class="info-card">
+          <h3>Smart filtering</h3>
+          <p>Filter by major, city, and work type to find roles that fit how you actually want to work.</p>
+        </article>
+        <article class="info-card">
+          <h3>Verified companies</h3>
+          <p>Companies register on the platform so students can explore real listings in one place.</p>
+        </article>
+        <article class="info-card">
+          <h3>Track applications</h3>
+          <p>Save favorites, track every application, and see status updates from your dashboard.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="featured" id="internships">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured opportunities</h2>
+          <p>Latest internships from the database — explore more on the full listings page.</p>
+        </div>
+        <div class="internship-grid" id="internshipGrid"></div>
+
+        <div class="center">
+          <a class="primary" href="internships.html">See all internships <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="how container" id="companies">
+      <div class="section-title">
+        <h2>How it works</h2>
+      </div>
+      <div class="how-grid">
+        <article class="step-card">
+          <span class="pill blue">For students</span>
+          <h3>1. Discover</h3>
+          <p>Search internships matched to your major and city.</p>
+          <h3>2. Apply</h3>
+          <p>Apply from the listing page when you are logged in.</p>
+          <h3>3. Track</h3>
+          <p>Watch your application status from your dashboard.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="pill yellow">For companies</span>
+          <h3>1. Register</h3>
+          <p>Create a company account.</p>
+          <h3>2. Post roles</h3>
+          <p>Publish internship listings for students to find.</p>
+          <h3>3. Review</h3>
+          <p>Review applicants and update their status from your dashboard.</p>
+        </article>
+
+        <article class="cta-card" id="homeCtaCard">
+          <h3>Ready to start?</h3>
+          <p id="homeCtaText">Create a free account in under a minute and start exploring real internship opportunities today.</p>
+          <a class="accent" href="signup.html" id="homeCtaLink">Get started <span>→</span></a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="index.html" class="brand"><span class="logo">▥</span><span>TADREEBCOM</span></a>
+        <p>The trusted internship platform for Jordan.</p>
+      </div>
+      <span>&copy; 2026 TADREEBCOM. All rights reserved.</span>
+    </div>
+  </footer>
+
+
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

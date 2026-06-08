@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Internships | TADREEBCOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/internships.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <a class="brand" href="index.html">
+    <span class="logo">▥</span>
+    <span>TADREEBCOM</span>
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="internships.html">Find Internships</a>
+    <a href="companies.html">Companies</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+      <span id="themeIcon">☾</span>
+    </button>
+    <a class="link-btn" href="login.html">Log in</a>
+    <a class="primary small" href="signup.html">Sign up</a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<main class="internships-page">
+  <section class="container">
+    <div class="page-heading">
+      <h1>Find Internships</h1>
+      <p>Discover opportunities that match your skills and goals in Jordan.</p>
+    </div>
+
+    <div class="internships-layout">
+      <aside class="filter-panel">
+        <h2><span>⌯</span> Filters</h2>
+
+        <label>
+          Search
+          <input id="listSearch" type="search" placeholder="Keywords, skills...">
+        </label>
+
+        <label>
+          Major
+          <select id="listMajor">
+            <option value="all">All Majors</option>
+            <!-- نفس قيم عمود التخصص بالداتا بيز -->
+            <option value="علم الحاسوب">Computer Science</option>
+            <option value="أمن المعلومات والشبكات">Information Security & Networks</option>
+          </select>
+        </label>
+
+        <label>
+          City
+          <select id="listCity">
+            <option value="all">All Cities</option>
+            <option value="Amman">Amman</option>
+            <option value="Irbid">Irbid</option>
+            <option value="Zarqa">Zarqa</option>
+          </select>
+        </label>
+
+        <label>
+          Work Type
+          <select id="listWork">
+            <option value="all">All Types</option>
+            <option value="Hybrid">Hybrid</option>
+            <option value="Remote">Remote</option>
+            <option value="Onsite">Onsite</option>
+          </select>
+        </label>
+
+        <button class="primary full" id="applyFilters" type="button">Apply filters</button>
+        <button class="reset-btn" id="resetFilters" type="button">Reset</button>
+      </aside>
+
+      <section class="results-area">
+        <p class="result-count" id="resultCount">Loading opportunities...</p>
+        <div class="internship-list" id="internshipList"></div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="brand" href="index.html"><span class="logo">▥</span><span>TADREEBCOM</span></a>
+      <p>The trusted internship platform for university students in Jordan.</p>
+    </div>
+    <span>&copy; 2026 TADREEBCOM. All rights reserved.</span>
+  </div>
+</footer>
+
+
+
+  <script src="js/common.js"></script>
+  <script src="js/student.js"></script>
+  <script src="js/internships-list.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internship details | TADREEBCOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/detail.css" />
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="../index.html"><span class="logo">▥</span><span>TADREEBCOM</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="../internships.html">Find Internships</a>
+    <a href="../companies.html">Companies</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"><span id="themeIcon">☾</span></button>
+    <a class="link-btn" href="../login.html">Log in</a>
+    <a class="primary small" href="../signup.html">Sign up</a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<main class="detail-page internship-new-detail-page">
+  <section class="container narrow">
+    <a class="back-link" href="../internships.html">← Back to internships</a>
+
+    <article class="role-detail-card detail-hero-card">
+      <div class="role-head">
+        <div class="big-avatar" id="detailInitials">—</div>
+        <div>
+          <span class="tag work" id="detailStatus">Open for applications</span>
+          <h1 id="detailTitle">Internship title</h1>
+          <span class="company blue-link" id="detailCompany">Company name</span>
+        </div>
+      </div>
+      <div class="detail-box-row">
+        <div class="mini-info"><b>Work type</b><span id="detailWork">—</span></div>
+        <div class="mini-info"><b>Location</b><span id="detailLocation">—</span></div>
+        <div class="mini-info"><b>Target major</b><span id="detailMajor">—</span></div>
+      </div>
+    </article>
+
+    <div class="detail-grid screenshot-detail-grid">
+      <section class="role-detail-card detail-main-card">
+        <div class="detail-box-row top-stats">
+          <div class="mini-info"><small>CATEGORY</small><b id="detailCategory">Not specified</b></div>
+          <div class="mini-info"><small>APPLICANTS</small><b id="detailApplicants">0 applicants</b></div>
+          <div class="mini-info"><small>CAPACITY</small><b id="detailCapacity">No applicant limit</b></div>
+        </div>
+        <hr>
+        <h2>Training nature</h2>
+        <p id="detailDescription">Training details are not available right now.</p>
+        <hr>
+        <h2>Application status</h2>
+        <p id="detailApplicationStatus">Sign in as a student to apply for this internship.</p>
+      </section>
+
+      <aside>
+        <article class="side-card apply-interaction" id="detailApplyBox">
+          <h2>Apply to this internship</h2>
+          <p>Submit your application or save this opportunity for later.</p>
+          <form class="apply-form"><button class="primary full" type="submit" id="detailApplyBtn">Apply now</button></form>
+          <button class="secondary full save-internship-btn" id="detailSaveBtn" type="button">♡ Save for later</button>
+        </article>
+
+        <article class="side-card company-info-card">
+          <h2>Company information</h2>
+          <small>NAME</small><p id="companyInfoName">Company name</p>
+          <small>TYPE</small><p id="companyInfoType">Not specified</p>
+          <small>LOCATION</small><p id="companyInfoLocation">Not specified</p>
+          <small>EMAIL</small><p id="companyInfoEmail">Not specified</p>
+          <small>PHONE</small><p id="companyInfoPhone">Not specified</p>
+          <a class="secondary full website-btn" id="companyInfoWebsite" href="#" target="_blank" rel="noopener">Visit website</a>
+        </article>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><a class="brand" href="../index.html"><span class="logo">▥</span><span>TADREEBCOM</span></a><p>The trusted internship platform for Jordan.</p></div>
+    <span>© 2026 TADREEBCOM. All rights reserved.</span>
+  </div>
+</footer>
+
+<script src="../js/common.js"></script>
+<script src="../js/student.js"></script>
+<script src="../js/internship-detail-page.js"></script>
+</body>
+</html>

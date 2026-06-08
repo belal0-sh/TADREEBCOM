@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Profile | TADREEBCOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body><header class="navbar dashboard-navbar">
+  <a class="brand" href="company-dashboard.html"><span class="logo">▥</span><span>TADREEBCOM</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a class="" href="company-dashboard.html">Dashboard</a>
+    <a class="" href="company-listings.html">Listings</a>
+    <a class="active" href="company-profile.html">Company profile</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeToggle"><span id="themeIcon">☾</span></button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+<main class="dashboard-page"><section class="container form-container">
+  <div class="dashboard-heading"><h1>Company profile</h1><p>Update how your company appears across TADREEBCOM.</p></div>
+  <form class="company-form" id="companyProfileForm">
+    <label>Company name<input type="text" value=""></label>
+    <div class="form-grid">
+      <label>Website<input type="url" value=""></label>
+      <label>Industry<select>
+        <option value="choose industry">Choose industry</option>
+        <option >Logistics</option>
+        <option>Software Development</option>
+        <option>Cyber Security</option>
+        <option>Artificial Intelligence</option>
+        <option>IT Services</option>
+      </select></label>
+    </div>
+    <label>City<select>
+      <option value="choose city">Choose city</option>
+      <option>Amman</option>
+      <option>Irbid</option>
+    </select></label>
+    <label>About your company<textarea></textarea></label>
+    <button class="primary full" type="submit">Save profile</button>
+  </form>
+</section></main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><a class="brand" href="company-dashboard.html"><span class="logo">▥</span><span>TADREEBCOM</span></a><p>The trusted internship platform for Jordan.</p></div>
+    <span>© 2026 TADREEBCOM. All rights reserved.</span>
+  </div>
+</footer>
+
+
+  <script src="../js/common.js"></script>
+  <script src="../js/company.js"></script>
+</body>
+</html>

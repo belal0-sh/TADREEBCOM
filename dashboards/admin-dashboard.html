@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | TADREEBCOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body><header class="navbar dashboard-navbar">
+  <a class="brand" href="admin-dashboard.html"><span class="logo">▥</span><span>TADREEBCOM</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a class="active" href="admin-dashboard.html">Overview</a>
+    <a class="" href="admin-companies.html">Companies</a>
+    <a class="" href="admin-internships.html">Internships</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeToggle"><span id="themeIcon">☾</span></button>
+    <button class="user-avatar">PA</button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+<main class="dashboard-page admin-page">
+  <section class="container">
+    <div class="dashboard-heading">
+      <h1>Admin dashboard</h1>
+      <p>Live insights on your platform.</p>
+    </div>
+
+    <section class="stats dashboard-stats admin-stats">
+      <article><span>Students</span><strong id="adminStudentCount">0</strong></article>
+      <article><span>Approved companies</span><strong id="adminApprovedCount">0</strong><p id="adminPendingSmall">0 pending</p></article>
+      <article><span>Internships</span><strong id="adminInternshipCount">0</strong><p id="adminActiveSmall">0 active</p></article>
+      <article><span>Applications</span><strong id="adminApplicationCount">0</strong><p id="adminAcceptedSmall">0 accepted</p></article>
+    </section>
+
+    <section class="admin-grid">
+      <article class="admin-card wide">
+        <h2>Top majors in demand</h2>
+        <div class="bar-row"><span>Software Engineering</span><div><i><!--the width of the bar --></i></div><b id="softwareEngineeringCount">0</b></div>
+        <div class="bar-row"><span>Graphic Design</span><div><i ></i></div><b id="graphicDesignCount">0</b></div>
+        <div class="bar-row"><span>Computer Science</span><div><i ></i></div><b id="computerScienceCount">0</b></div>
+        <div class="bar-row"><span>Data Science</span><div><i ></i></div><b id="dataScienceCount">0</b></div>
+        <div class="bar-row"><span>Electrical Engineering</span><div><i ></i></div><b id="electricalEngineeringCount">0</b></div>
+        <div class="bar-row"><span>Cybersecurity</span><div><i ></i></div><b id="cybersecurityCount">0</b></div>
+      </article>
+
+      <article class="admin-card">
+        <h2>Application breakdown</h2>
+        <div class="donut-wrap">
+          <div class="donut"><span><b id="donutTotal">0</b><small>total</small></span></div>
+          <div class="legend">
+            <p><i class="green"></i> Accepted <b id="acceptedLegend">0</b></p>
+            <p><i class="orange"></i> Pending <b id="pendingLegend">0</b></p>
+            <p><i class="red"></i> Rejected <b id="rejectedLegend">0</b></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="admin-card tall">
+        <h2>Top cities</h2>
+        <div class="bar-row"><span>Amman</span><div><i ></i></div><b id="ammanCount">0</b></div>
+        <div class="bar-row"><span>Irbid</span><div><i ></i></div><b id="irbidCount">0</b></div>
+        <div class="bar-row"><span>Ma'an</span><div><i ></i></div><b id="maanCount">0</b></div>
+      </article>
+
+      <article class="admin-card tall">
+        <h2>Recent signups</h2>
+        <div class="signup-list">
+          <!--here should appear the list of recent signups-->
+        </div>
+      </article>
+    </section>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><a class="brand" href="admin-dashboard.html"><span class="logo">▥</span><span>TADREEBCOM</span></a><p>The trusted internship platform for Jordan.</p></div>
+    <span>© 2026 TADREEBCOM. All rights reserved.</span>
+  </div>
+</footer>
+
+
+  <script src="../js/common.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

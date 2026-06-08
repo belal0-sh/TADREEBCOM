@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Dashboard | TADREEBCOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body>
+  <header class="navbar dashboard-navbar">
+  <a class="brand" href="company-dashboard.html"><span class="logo">▥</span><span>TADREEBCOM</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a class="active" href="company-dashboard.html">Dashboard</a>
+    <a class="" href="company-listings.html">Listings</a>
+    <a class="" href="company-profile.html">Company profile</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeToggle"><span id="themeIcon">☾</span></button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+<main class="dashboard-page company-dashboard-page">
+  <section class="container">
+    <div class="company-top">
+      <div class="dashboard-heading"><h1 id="companyDashboardTitle">Company dashboard</h1><p>Manage your listings and review applicants.</p></div>
+      <a class="primary post-btn" href="company-post-internship.html">＋ Post new internship</a>
+    </div>
+
+    <section class="stats dashboard-stats company-stats">
+      <article><span>Total listings</span><strong id="companyTotalListings">0</strong></article>
+      <article><span>Active</span><strong id="companyActiveCount">0</strong></article>
+      <article><span>Pending applicants</span><strong id="companyPendingCount">0</strong></article>
+      <article><span>Accepted Students</span><strong id="companyAcceptedCount">0</strong></article>
+    </section>
+
+    <section class="company-panel">
+      <div class="panel-head"><h2>Recent applicants</h2><a href="company-listings.html">Manage listings</a></div>
+      <div class="activity-table company-table">
+        <div class="table-row table-head applicants-head"><span>STUDENT</span><span>INTERNSHIP</span><span>STATUS</span><span>APPLIED</span></div>
+        <div id="companyRecentApplicants"></div>
+      </div>
+    </section>
+
+    <section class="active-internships-section">
+      <h2>Your active internships</h2>
+      <div class="company-active-grid">
+        <!--here the active internships will be displayed -->
+        
+      </div>
+    </section>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><a class="brand" href="company-dashboard.html"><span class="logo">▥</span><span>TADREEBCOM</span></a><p>The trusted internship platform for Jordan.</p></div>
+    <span>© 2026 TADREEBCOM. All rights reserved.</span>
+  </div>
+</footer>
+
+
+  <script src="../js/common.js"></script>
+  <script src="../js/company.js"></script>
+</body>
+</html>

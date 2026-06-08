@@ -1,0 +1,228 @@
+/* صفحة البحث عن التدريبات */
+.internships-page {
+  background: var(--bg);
+  padding: 28px 0 80px;
+  min-height: calc(100vh - 170px);
+}
+
+.page-heading {
+  margin-bottom: 36px;
+}
+
+.page-heading h1 {
+  font-size: 38px;
+  letter-spacing: -.04em;
+  margin-bottom: 8px;
+}
+
+.page-heading p {
+  font-size: 15px;
+}
+
+.internships-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.filter-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  position: sticky;
+  top: 108px;
+  /* عشان اللوحة ما تطلع برا المساحة */
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.filter-panel h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-panel h2 span {
+  font-size: 24px;
+  color: var(--primary);
+}
+
+.filter-panel label {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 24px;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* حقول الفلتر: عرض ثابت وما تنكسر */
+.filter-panel input,
+.filter-panel select {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  height: 48px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0 14px;
+  outline: none;
+  font-size: 15px;
+  text-overflow: ellipsis;
+}
+
+.filter-panel input:focus,
+.filter-panel select:focus {
+  border-color: var(--primary);
+}
+
+.reset-btn {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 800;
+  margin-top: 18px;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.result-count {
+  margin: 4px 0 18px;
+  font-size: 16px;
+}
+
+.internship-list {
+  display: grid;
+  gap: 16px;
+}
+
+/* بطاقة فرصة بالقائمة */
+.list-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.list-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 14px 40px rgba(7, 96, 131, .08);
+  transform: translateY(-2px);
+}
+
+/* أول حرف من اسم الشركة */
+.list-card .avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.list-card h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.list-card .company {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.list-card p {
+  margin-top: 16px;
+  font-size: 15px;
+}
+
+.list-card .card-foot {
+  margin-top: 16px;
+}
+
+.list-card .card-foot-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.list-card .save-internship-btn.list-save-btn {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  background: var(--surface);
+  color: var(--primary);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.list-card .save-internship-btn.list-save-btn.saved {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #172536;
+}
+
+.empty-list {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 30px;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .internships-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-panel {
+    position: static;
+  }
+
+  .list-card {
+    grid-template-columns: 1fr;
+  }
+
+  .page-heading h1 {
+    font-size: 38px;
+  }
+}
+
+.list-card.card-link {
+  color: inherit;
+  text-decoration: none;
+  display: grid;
+}
+
+
+/* Contact email fix */
+.contact-cell,
+.contact-info,
+td:last-child{
+    white-space: normal !important;
+    word-break: break-word !important;
+    overflow: visible !important;
+    max-width: 220px;
+}

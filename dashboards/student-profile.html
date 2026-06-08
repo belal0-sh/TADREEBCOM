@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Profile | TADREEBCOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body>
+<header class="navbar dashboard-navbar">
+  <a class="brand" href="../index.html"><span class="logo">▥</span><span>TADREEBCOM</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="student-dashboard.html">Dashboard</a>
+    <a href="../internships.html">Find Internships</a>
+    <a href="../companies.html">Companies</a>
+    <a href="student-applications.html">My Applications</a>
+    <a href="student-saved.html">Saved</a>
+    <a href="student-profile.html" class="active">Profile</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeToggle"><span id="themeIcon">☾</span></button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<main class="dashboard-page profile-page">
+  <section class="container profile-container">
+    <div class="dashboard-heading">
+      <h1>My profile</h1>
+      <p>Keep your details up to date.</p>
+    </div>
+
+    <form class="profile-form" id="profileForm">
+      <div class="form-grid">
+      <label>
+        First name
+        <input type="text" id="prof_first_name" name="first_name" placeholder="First name" required>
+      </label>
+
+      <label>
+        Last name
+        <input type="text" id="prof_last_name" name="last_name" placeholder="Last name" required>
+      </label>
+    </div>
+
+      <label>
+        Email
+        <input type="email" id="prof_email" name="email" readonly style="background-color: var(--bg-alt); cursor: not-allowed;">
+      </label>
+      <label>
+        Phone number
+        <input type="text" id="prof_phone" name="phone_number" placeholder="07xxxxxxxx">
+      </label>
+        
+
+      <div class="form-grid">
+        <label>
+          University
+          <select id="prof_university" name="university">
+            <option value="University of Jordan">University of Jordan</option>
+            <option value="Yarmouk University">Yarmouk University</option>
+            <option value="JUST">JUST</option>
+            <option value="Al-Balqa Applied University">Al-Balqa Applied University</option>
+            <option value="Hashemite University">Hashemite University</option>
+          </select>
+        </label>
+
+        <label>
+          Major
+          <select id="prof_major" name="major">
+            <option value="Computer Science">Computer Science</option>
+            <option value="Artificial Intelligence">Artificial Intelligence</option>
+            <option value="Cyber Security">Cyber Security</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Software Engineering">Software Engineering</option>
+            <option value="Computer Information Systems">Computer Information Systems</option>
+          </select>
+        </label>
+      </div>
+
+      <button class="primary full" type="submit">Save changes</button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><a class="brand" href="../index.html"><span class="logo">▥</span><span>TADREEBCOM</span></a><p>The trusted internship platform for Jordan.</p></div>
+    <span>© 2026 TADREEBCOM. All rights reserved.</span>
+  </div>
+</footer>
+
+
+  <script src="../js/common.js"></script>
+  <script src="../js/student.js"></script>
+</body>
+</html>

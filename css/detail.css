@@ -1,0 +1,459 @@
+/* صفحات التفاصيل */
+.detail-page,
+.company-profile-page {
+  background: var(--bg);
+  min-height: calc(100vh - 170px);
+  padding: 44px 0 80px;
+}
+
+.narrow {
+  max-width: 980px;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+
+.back-link:hover,
+.blue-link,
+.apply-box a,
+.profile-link {
+  color: var(--primary);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 430px;
+  gap: 28px;
+  align-items: start;
+}
+
+.role-detail-card,
+.apply-box,
+.side-card,
+.company-hero-card,
+.reviews-empty {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, .04);
+}
+
+.role-detail-card {
+  padding: 34px;
+}
+
+.role-head {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+.big-avatar {
+  width: 104px;
+  height: 104px;
+  border-radius: 18px;
+  background: var(--primary);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  font-weight: 800;
+  flex: 0 0 auto;
+}
+
+.role-detail-card h1 {
+  font-size: clamp(34px, 4vw, 50px);
+  letter-spacing: -.04em;
+  margin: 12px 0 8px;
+}
+
+.detail-tags {
+  margin: 34px 0 30px;
+}
+
+.role-detail-card h2,
+.side-card h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.role-detail-card p {
+  font-size: 19px;
+  color: var(--text);
+}
+
+.apply-box {
+  padding: 28px 34px;
+  margin-top: 26px;
+}
+
+.apply-box p {
+  font-size: 18px;
+}
+
+.side-card {
+  padding: 28px;
+  margin-bottom: 18px;
+}
+
+.side-card p {
+  font-size: 17px;
+  margin: 14px 0;
+}
+
+.website-btn {
+  margin: 16px 0 12px;
+  height: 52px;
+}
+
+.profile-link {
+  display: block;
+  text-align: center;
+  font-weight: 800;
+}
+
+.company-hero-card {
+  padding: 34px;
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  gap: 24px;
+  align-items: start;
+}
+
+.company-hero-card h1 {
+  font-size: 42px;
+  letter-spacing: -.04em;
+  margin-bottom: 12px;
+}
+
+.company-desc {
+  margin-top: 24px;
+  max-width: 760px;
+  font-size: 20px;
+  color: var(--muted);
+}
+
+.website-small {
+  min-width: 150px;
+  height: 52px;
+  padding: 0 26px;
+}
+
+.section-heading-left {
+  font-size: 34px;
+  margin: 42px 0 22px;
+  letter-spacing: -.03em;
+}
+
+.profile-list-card {
+  margin-bottom: 24px;
+}
+
+.reviews-empty {
+  border-style: dashed;
+  min-height: 210px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .detail-grid,
+  .company-hero-card {
+    grid-template-columns: 1fr;
+  }
+
+  .role-head {
+    align-items: flex-start;
+  }
+
+  .website-small {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .role-head {
+    flex-direction: column;
+  }
+
+  .role-detail-card,
+  .apply-box,
+  .side-card,
+  .company-hero-card {
+    padding: 24px;
+  }
+
+  .big-avatar {
+    width: 86px;
+    height: 86px;
+  }
+}
+
+
+.card-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.profile-internship-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.profile-intern-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: .25s ease;
+}
+
+.profile-intern-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 14px 40px rgba(7, 96, 131, .08);
+  transform: translateY(-3px);
+}
+
+.profile-intern-card p {
+  margin-top: 18px;
+  font-size: 17px;
+}
+
+.profile-intern-card .card-foot {
+  margin-top: 22px;
+}
+
+@media (max-width: 850px) {
+  .profile-internship-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.company-rating {
+  color: #f5a000;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.company-rating small {
+  color: var(--muted);
+  margin-left: 8px;
+}
+
+.review-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, .04);
+}
+
+.review-card strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+.review-card span {
+  color: var(--muted);
+}
+
+.review-rating {
+  display: flex;
+  gap: 12px;
+  align-items: start;
+}
+
+.review-rating span {
+  color: #f5a000;
+  white-space: nowrap;
+}
+
+.review-rating small {
+  color: var(--muted);
+}
+
+.company-hero-card {
+  grid-template-columns: 100px 1fr auto;
+}
+
+@media (max-width: 700px) {
+  .review-card {
+    flex-direction: column;
+  }
+}
+
+
+.apply-interaction h2 {
+  font-size: 22px;
+  margin-bottom: 22px;
+}
+
+.apply-interaction label {
+  display: grid;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.apply-interaction textarea {
+  width: 100%;
+  min-height: 140px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 18px;
+  outline: none;
+  resize: vertical;
+}
+
+.apply-interaction textarea:focus {
+  border-color: var(--primary);
+}
+
+.apply-interaction .primary {
+  margin-top: 20px;
+  height: 54px;
+}
+
+.already-applied p {
+  font-size: 20px;
+}
+
+.save-internship-btn {
+  width: 100%;
+  min-height: 54px;
+  border: 1px solid var(--primary);
+  background: var(--surface);
+  color: var(--primary);
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-bottom: 18px;
+}
+
+.save-internship-btn.saved {
+  background: var(--accent);
+  color: #172536;
+  border-color: var(--accent);
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+/* Contact email fix */
+.contact-info,
+.contact-info a,
+td.contact {
+    white-space: nowrap;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+.contact-column{
+    min-width: 220px;
+}
+/* New database internship details page */
+.internship-new-detail-page .narrow {
+  max-width: 1180px;
+}
+
+.detail-hero-card {
+  margin-bottom: 24px;
+}
+
+.detail-hero-card .role-head {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-box-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.mini-info {
+  background: color-mix(in srgb, var(--primary) 7%, var(--surface));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  min-height: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.mini-info span,
+.mini-info small {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.screenshot-detail-grid {
+  grid-template-columns: 1fr 330px;
+}
+
+.detail-main-card hr,
+.company-info-card hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+.detail-main-card p,
+.company-info-card p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.company-info-card small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  margin-top: 16px;
+}
+
+.company-info-card p {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+  margin: 7px 0 0;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.company-info-card .website-btn {
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .screenshot-detail-grid,
+  .detail-box-row {
+    grid-template-columns: 1fr;
+  }
+}

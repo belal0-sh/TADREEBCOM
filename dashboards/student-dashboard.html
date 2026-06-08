@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard | TADREEBCOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+<body>
+
+<header class="navbar dashboard-navbar">
+  <a class="brand" href="../index.html">
+    <span class="logo">▥</span>
+    <span>TADREEBCOM</span>
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a class="active" href="student-dashboard.html">Dashboard</a>
+    <a href="../internships.html">Find Internships</a>
+    <a href="../companies.html">Companies</a>
+    <a href="student-applications.html">My Applications</a>
+    <a href="student-saved.html">Saved</a>
+    <a href="student-profile.html">Profile</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+      <span id="themeIcon">☾</span>
+    </button>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<main class="dashboard-page">
+  <section class="container">
+    <div class="dashboard-heading">
+      <h1 id="welcomeMessage">Welcome back.</h1>
+      <p>Here's what's happening with your internship search.</p>
+    </div>
+
+    <section class="stats dashboard-stats">
+      <article>
+        <span>Total applications</span>
+        <strong id="totalApplicationsCount">0</strong>
+      </article>
+
+      <article>
+        <span>Pending</span>
+        <strong id="pendingApplicationsCount">0</strong>
+      </article>
+
+      <article>
+        <span>Accepted</span>
+        <strong id="acceptedApplicationsCount">0</strong>
+      </article>
+
+      <article>
+        <span>Saved</span>
+        <strong id="savedCount">0</strong>
+      </article>
+    </section>
+
+    <section class="recommend-banner" id="dashboardRecommendBanner">
+      <div>
+        <h2 id="dashboardRecommendTitle">Recommended for Computer Science students</h2>
+        <p id="dashboardRecommendDesc">Internships matched to your major.</p>
+      </div>
+      <a href="../internships.html" class="accent">See all</a>
+    </section>
+
+    <section class="recommend-grid recommend-grid--dashboard" id="recommendedGrid" aria-live="polite"></section>
+
+    <div class="dashboard-majors-toggle" id="dashboardMajorsToggle" hidden>
+      <button type="button" class="dashboard-majors-toggle-btn" id="toggleDashboardMajorsBtn">
+        Show internships for other majors
+      </button>
+    </div>
+
+    <section class="recent-section">
+      <h2>Recent activity</h2>
+
+      <div class="activity-table">
+        <div class="table-row table-head applications-head">
+          <span>INTERNSHIP</span>
+          <span>COMPANY</span>
+          <span>STATUS</span>
+          <span>APPLIED</span>
+          <span></span>
+        </div>
+
+        <div id="applicationsRows"></div>
+      </div>
+    </section>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="brand" href="../index.html"><span class="logo">▥</span><span>TADREEBCOM</span></a>
+      <p>The trusted internship platform for Jordan.</p>
+    </div>
+    <span>© 2026 TADREEBCOM. All rights reserved.</span>
+  </div>
+</footer>
+
+
+  <script src="../js/common.js"></script>
+  <script src="../js/student.js"></script>
+</body>
+</html>

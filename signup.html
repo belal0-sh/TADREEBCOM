@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up | TADREEBCOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/signup.css" />
+</head>
+<body class="signup-page">
+
+<header class="navbar">
+  <a class="brand" href="index.html">
+    <span class="logo">▥</span>
+    <span>TADREEBCOM</span>
+  </a>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="internships.html">Find Internships</a>
+    <a href="companies.html">Companies</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+      <span id="themeIcon">☾</span>
+    </button>
+    <a class="link-btn" href="login.html">Log in</a>
+    <a class="primary small" href="signup.html">Sign up</a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<main class="signup-layout with-navbar">
+  <section class="signup-left">
+    
+    <div class="signup-copy">
+      <h1>Join the largest internship community in Jordan.</h1>
+      <p>One profile, hundreds of opportunities. Get started in less than a minute.</p>
+
+      <ul>
+        <li>Free for students and companies</li>
+        <li>Verified employer accounts only</li>
+        <li>Built specifically for the Jordanian market</li>
+      </ul>
+    </div>
+
+    <p class="signup-note">Already have an account? <a href="login.html">Log in</a></p>
+  </section>
+
+  <section class="signup-right">
+    <form class="signup-box" id="signupForm">
+      <h2>Create an account</h2>
+      <p>Choose how you'll use TADREEBCOM.</p>
+
+      <div class="role-cards">
+        <button type="button" class="role-card active" data-role="student" id="btnStudent">
+          <span>♛</span>
+          <strong>I'm a student</strong>
+          <small>Find internships in Jordan</small>
+        </button>
+
+        <button type="button" class="role-card" data-role="company" id="btnCompany">
+          <span>▦</span>
+          <strong>I'm a company</strong>
+          <small>Hire top student talent</small>
+        </button>
+      </div>
+
+      <div id="studentFields">
+        <div class="form-grid">
+          <label class="full-width">
+            Username
+            <input type="text" id="username" name="username" placeholder="Enter username" required>
+          </label>
+
+          <label>
+          First name
+          <input type="text" id="firstName" placeholder="Enter your first name" required>
+        </label>
+
+        <label>
+          Last name
+          <input type="text" id="lastName" placeholder="Enter your last name" required>
+        </label>
+          
+
+
+          <label>
+          Email
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </label>
+
+        <label>
+            Phone number 
+            <input type="tel" id="phone" placeholder="Enter phone number">
+          </label>
+          <label class="full-width">
+            Password
+            <input type="password" id="password" placeholder="Create a password" minlength="6" required>
+            </label>
+          <label>
+            University
+            <select id="university" required>
+              <option value="">Select university</option>
+              <option>University of Jordan</option>
+              <option>Yarmouk University</option>
+              <option>JUST</option>
+              <option>Al-Balqa Applied University</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>
+            Major
+            <select id="major" required>
+              <option value="">Select major</option>
+              <option>Computer Science</option>
+              <option>Artificial Intelligence</option>
+              <option>Cyber Security</option>
+              <option>Data Science</option>
+              <option>Software Engineering</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div id="companyFields" class="hidden">
+        <div class="form-grid">
+          <label class="full-width" >
+            Company name
+            <input type="text" id="companyName" placeholder="Enter company name">
+          </label>
+           <label>
+          Email
+          <input type="email" id="companyEmail" placeholder="Enter your email" required>
+        </label>
+          <label>
+            Phone number 
+            <input type="tel" id="companyPhone" placeholder="Enter phone number" required> 
+          </label>
+          <label class="full-width">
+            Password
+            <input type="password" id="companyPassword" placeholder="Create a password" minlength="6" required>
+            </label>
+          <div class="form-grid">
+            <label class="full-width">
+              City
+              <select id="city" required>
+                <option value="">Select city</option>
+                <option>Amman</option>
+                <option>Irbid</option>
+                <option>Zarqa</option>
+              </select>
+            </label>
+          </div>
+          
+          <label>
+            Industry
+            <select id="industry" required>
+              <option value="">Select industry</option>
+              <option>Software Development</option>
+              <option>IT Services</option>
+              <option>Telecommunications</option>
+              <option>Banking & Finance</option>
+              <option>Government institution</option>
+              <option>Education and training sector</option>
+              <option>Energy & Mining Sector</option>
+              <option>Information Technology Sector</option>
+              <option>Information Technology / Commerce</option>
+              <option>Information Technology / Government</option>
+            </select>
+          </label>
+        </div>
+        <label class="full-width">
+              Website
+              <input type="url" id="website" placeholder="https://" required>
+            </label>
+        
+      </div>
+
+      <button class="primary full" type="submit">Create account</button>
+
+      <p class="switch-text"  style="text-align: center; margin-top: 20px; ">Already have an account? <a href="login.html"> Log in </a></p>
+</form>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <a class="brand" href="index.html"><span class="logo">▥</span><span>TADREEBCOM</span></a>
+      <p>The trusted internship platform for Jordan.</p>
+    </div>
+    <span>&copy; 2026 TADREEBCOM. All rights reserved.</span>
+  </div>
+
+
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

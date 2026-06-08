@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in | TADREEBCOM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/login.css" />
+</head>
+<body class="login-page">
+
+<header class="navbar">
+    <a class="brand" href="index.html">
+      <span class="logo">▥</span>
+      <span>TADREEBCOM</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="internships.html">Find Internships</a>
+      <a href="companies.html">Companies</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+        <span id="themeIcon">☾</span>
+      </button>
+      <a class="link-btn" href="login.html">Log in</a>
+      <a class="primary small" href="signup.html">Sign up</a>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+</header>
+
+<main class="auth-layout with-navbar">
+    <section class="auth-left">
+      <div class="auth-copy">
+        <h1>Welcome back to your career hub.</h1>
+        <p>Pick up where you left off — review applications, message employers, and discover new internships.</p>
+
+        <ul>
+          <li>Track every application in one place</li>
+          <li>Save your favorite opportunities</li>
+          <li>Get notified when an employer responds</li>
+        </ul>
+      </div>
+
+      <p class="auth-note">Trusted by students from all major Jordanian universities.</p>
+    </section>
+
+    <section class="auth-right">
+      <form class="login-box" id="loginForm">
+        <h2>Log in</h2>
+        <p>Welcome back. Enter your details to continue.</p>
+
+        <label>
+          Email
+          <input id="email" type="email" placeholder="you@gmail.com" required>
+        </label>
+
+        <div class="password-wrapper">
+          <label>
+            Password
+            <input id="password" type="password" placeholder="••••••••" required>
+          </label>
+          <span class="toggle-password" id="togglePassword">👁</span>
+        </div>
+        <button class="primary full" type="submit">Log in</button>
+
+        <p class="switch-text">New here? <a href="signup.html">Create an account</a></p>
+
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="index.html"><span class="logo">▥</span><span>TADREEBCOM</span></a>
+        <p>The trusted internship platform for Jordan.</p>
+      </div>
+      <span>&copy; 2026 TADREEBCOM. All rights reserved.</span>
+    </div>
+</footer>
+
+
+  <script src="js/common.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
