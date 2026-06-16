@@ -36,7 +36,7 @@ function adminSetEmptyStats() {
     "adminStudentCount", "adminApprovedCount", "adminInternshipCount", "adminApplicationCount",
     "donutTotal", "acceptedLegend", "pendingLegend", "rejectedLegend",
     "softwareEngineeringCount", "graphicDesignCount", "computerScienceCount", "dataScienceCount",
-    "electricalEngineeringCount", "cybersecurityCount", "ammanCount", "irbidCount", "maanCount",
+    "electricalEngineeringCount", "cybersecurityCount", "ammanCount", "irbidCount",
     "pendingTabCount", "approvedTabCount", "rejectedTabCount"
   ].forEach(id => adminSetText(id, 0));
   adminSetText("adminPendingSmall", "0 pending");
@@ -187,10 +187,7 @@ function renderAdminBreakdowns(stats) {
     "Amman": "ammanCount",
     "amman": "ammanCount",
     "Irbid": "irbidCount",
-    "irbid": "irbidCount",
-    "Ma'an": "maanCount",
-    "Maan": "maanCount",
-    "maan": "maanCount"
+    "irbid": "irbidCount"
   };
 
   const majorMax = Math.max(...Object.values(majorCounts), 0);
