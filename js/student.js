@@ -410,7 +410,13 @@ async function getCurrentStudentApplicationsCount(studentId) {
     const response = await fetch(`${API_BASE}/applications?studentId=${encodeURIComponent(studentId)}`, { cache: "no-store" });
     if (!response.ok) throw new Error("applications count failed");
     const applications = await response.json();
-    return Array.isArray(applications) ? applications.length : Number(applications.count ?? 0) || 0;
+    if (!Array.isArray(applications)) {
+        return Number(applications.count ?? 0) || 0;
+    }
+    return applications.filter(app => {
+        const status = String(app.status || "").toLowerCase();
+        return status === "pending" || status === "approved" || status === "accepted";
+    }).length;
 }
 
 async function getInternshipCapacityStatus(internshipId) {
@@ -438,7 +444,7 @@ async function applyForInternship(internshipId) {
     try {
         const currentApplications = await getCurrentStudentApplicationsCount(studentId);
         if (currentApplications >= MAX_STUDENT_APPLICATIONS) {
-            alert("لا يمكنك التقديم على أكثر من 5 تدريبات.");
+           alert("لا يمكنك امتلاك أكثر من 5 طلبات نشطة. الطلبات المرفوضة لا تُحسب.");
             return;
         }
 
