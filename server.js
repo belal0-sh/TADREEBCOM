@@ -286,8 +286,18 @@ app.post('/api/applications', async (req, res) => {
   try {
     const duplicates = await q('SELECT application_id FROM applications WHERE student_id = ? AND internship_id = ?', [studentId, internshipId]);
     if (duplicates.length) return res.status(400).json({ error: 'لقد تقدمت لهذا التدريب مسبقاً!' });
-    const countRows = await q('SELECT COUNT(*) AS c FROM applications WHERE student_id = ?', [studentId]);
-    if (toNum(countRows[0].c) >= 5) return res.status(400).json({ error: 'لا يمكنك التقديم على أكثر من 5 تدريبات.' });
+    const countRows = await q(
+      `SELECT COUNT(*) AS c
+       FROM applications
+       WHERE student_id = ?
+       AND LOWER(status) IN ('pending', 'approved', 'accepted')`,
+      [studentId]
+    );
+    if (toNum(countRows[0].c) >= 5) {
+      return res.status(400).json({ 
+        error: 'لا يمكنك امتلاك أكثر من 5 طلبات نشطة.' 
+      });
+    }
     const capRows = await q("SELECT status, max_applicants, (SELECT COUNT(*) FROM applications a WHERE a.internship_id = internships.internship_id AND LOWER(a.status) != 'rejected') AS applicants_count FROM internships WHERE internship_id = ?", [internshipId]);
     if (!capRows.length) return res.status(404).json({ error: 'التدريب غير موجود.' });
     if (!/approved/i.test(capRows[0].status || '')) return res.status(400).json({ error: 'هذا التدريب غير متاح للتقديم حالياً.' });
